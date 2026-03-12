@@ -1,47 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Zolve — Open App or Visit Website</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex">
-  <style>
-    body{font-family:system-ui,Segoe UI,Arial;margin:0;background:#f7fbff;color:#0b1724}
-    .wrap{max-width:720px;margin:6vh auto;padding:22px;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(10,10,10,0.06);text-align:center}
-    h1{font-size:20px;margin:6px 0}
-    p{color:#374151}
-    .btn{display:inline-block;padding:12px 20px;margin:10px;border-radius:10px;text-decoration:none;font-weight:600}
-    .primary{background:#0b74de;color:#fff}
-    .outline{border:1px solid #d1d5db;color:#0b1724;background:#fff}
-    .small{font-size:13px;color:#6b7280;margin-top:12px}
-  </style>
+<meta charset="utf-8">
+<title>Zolve Signup Bonus</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+body{
+  font-family:Arial;
+  background:#f5f7fb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  margin:0;
+}
+.card{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  text-align:center;
+  max-width:420px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+.code{
+  font-size:22px;
+  font-weight:bold;
+  background:#eef2ff;
+  padding:10px;
+  border-radius:8px;
+  margin:15px 0;
+}
+.button{
+  display:block;
+  padding:12px 20px;
+  margin:15px auto 0 auto;
+  font-size:16px;
+  border:none;
+  border-radius:8px;
+  background:#2563eb;
+  color:white;
+  cursor:pointer;
+  text-decoration:none;
+  text-align:center;
+}
+.steps{
+  font-size:14px;
+  margin-top:15px;
+  text-align:left;
+}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Zolve — Open the app or continue on the web</h1>
-    <p>Use the buttons below. If the app does not open, try the web signup or install from the store.</p>
+<div class="card">
 
-    <!-- Deep link (opens app if installed; on desktop may open store) -->
-    <div>
-      <a class="btn primary" href="https://zolve.onelink.me/o1XN?pid=referrals&deep_link_sub2=ZOLVE-3VZ5V1Y5&referral_code=ZOLVE-3VZ5V1Y5&c=ZOLVE-3VZ5V1Y5" rel="sponsored noopener noreferrer" target="_blank">
-        Open Zolve app
-      </a>
+<h2>Zolve Signup Bonus</h2>
 
-      <!-- Web fallback (users on desktop will go here instead of app store) -->
-      <a class="btn outline" href="https://zolve.com" rel="noopener noreferrer" target="_blank">
-        Open Zolve website (desktop fallback)
-      </a>
-    </div>
+<p>$25 signup bonus</p>
 
-    <p class="small">If nothing happens after tapping “Open Zolve app”, your device may not have the app installed — use the store links below.</p>
+<p>Referral Code:</p>
+<div class="code">ZOLVE-3VZ5V1Y5</div>
+<button onclick="copyCode()">Copy Code</button>
 
-    <!-- App store links (generic search links if you don't have exact store URLs) -->
-    <div style="margin-top:14px">
-      <a class="btn outline" href="https://play.google.com/store/search?q=zolve" rel="noopener noreferrer" target="_blank">Google Play</a>
-      <a class="btn outline" href="https://apps.apple.com/search?term=zolve" rel="noopener noreferrer" target="_blank">App Store</a>
-    </div>
+<a class="button" href="https://zolve.onelink.me/o1XN?pid=referrals&deep_link_sub2=ZOLVE-3VZ5V1Y5&referral_code=ZOLVE-3VZ5V1Y5&c=ZOLVE-3VZ5V1Y5" target="_blank">
+Sign Up for Zolve
+</a>
 
-    <p class="small">Deep link used: <code style="background:#f3f4f6;padding:4px;border-radius:4px">zolve.onelink.me/…ZOLVE-3VZ5V1Y5</code></p>
-  </div>
+<div class="steps">
+<b>Instructions:</b>
+<br>1. Click the sign up button above
+<br>2. Create your Zolve account
+<br>3. Enter the referral code ZOLVE-3VZ5V1Y5 if asked
+<br>4. Start earning instantly
+</div>
+
+</div>
+
+<script>
+function copyCode(){
+  navigator.clipboard.writeText("ZOLVE-3VZ5V1Y5");
+  alert("Code copied!");
+}
+</script>
+
 </body>
 </html>
