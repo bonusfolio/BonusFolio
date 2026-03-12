@@ -1,14 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Fetch — Redirect</title>
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=https://referral.fetch.com/vvv3/referralqr?code=HBYBQE">
+<title>Fetch Rewards Signup Bonus</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+body{
+font-family:Arial;
+background:#f5f7fb;
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
+margin:0;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+text-align:center;
+max-width:420px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.code{
+font-size:22px;
+font-weight:bold;
+background:#eef2ff;
+padding:10px;
+border-radius:8px;
+margin:15px 0;
+}
+
+button{
+padding:10px 18px;
+font-size:16px;
+border:none;
+border-radius:8px;
+background:#2563eb;
+color:white;
+cursor:pointer;
+}
+
+.open{
+display:block;
+margin-top:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.steps{
+font-size:14px;
+margin-top:15px;
+text-align:left;
+}
+</style>
+
 </head>
-<body style="font-family:system-ui,Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0">
-<div style="text-align:center;padding:20px">
-<p>Redirecting to Fetch… <a href="https://referral.fetch.com/vvv3/referralqr?code=HBYBQE" rel="sponsored noopener noreferrer">Click here if not redirected</a></p>
+
+<body>
+
+<div class="card">
+
+<h2>Fetch $2 Signup Bonus</h2>
+
+<p>Earn rewards by scanning receipts from stores and restaurants.</p>
+
+<p>Use this referral code when signing up:</p>
+
+<div class="code">HBYBQE</div>
+
+<button onclick="copyCode()">Copy Code</button>
+
+<div class="steps">
+<b>Steps:</b>
+<br>1. Install Fetch Rewards
+<br>2. Create your account
+<br>3. Enter the referral code if asked
+<br>4. Scan your first receipt to activate the bonus
 </div>
+
+<a class="open" href="https://referral.fetch.com/vvv3/referralqr?code=HBYBQE" target="_blank">
+Install Fetch Rewards
+</a>
+
+</div>
+
+<script>
+function copyCode(){
+navigator.clipboard.writeText("HBYBQE");
+alert("Code copied!");
+}
+</script>
+
 </body>
-</html>
+  </html>
