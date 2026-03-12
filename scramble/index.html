@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Scramble Signup Bonus</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+body{
+  font-family:Arial;
+  background:#f5f7fb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  margin:0;
+}
+.card{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  text-align:center;
+  max-width:420px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+.code{
+  font-size:22px;
+  font-weight:bold;
+  background:#eef2ff;
+  padding:10px;
+  border-radius:8px;
+  margin:15px 0;
+}
+.button{
+  display:block;
+  padding:12px 20px;
+  margin:15px auto 0 auto;
+  font-size:16px;
+  border:none;
+  border-radius:8px;
+  background:#2563eb;
+  color:white;
+  cursor:pointer;
+  text-decoration:none;
+  text-align:center;
+}
+.steps{
+  font-size:14px;
+  margin-top:15px;
+  text-align:left;
+}
+</style>
+</head>
+<body>
+<div class="card">
+
+<h2>Scramble Signup Bonus</h2>
+
+<p>$1 signup bonus</p>
+
+<p>Referral Code:</p>
+<div class="code">9AARG7A</div>
+<button onclick="copyCode()">Copy Code</button>
+
+<a class="button" href="https://go.scrambly.io/ALuS8z" target="_blank">
+Sign Up for Scramble
+</a>
+
+<div class="steps">
+<b>Instructions:</b>
+<br>1. Click the sign up button above
+<br>2. Create your Scramble account
+<br>3. Enter the referral code 9AARG7A if asked
+<br>4. Start earning instantly
+</div>
+
+</div>
+
+<script>
+function copyCode(){
+  navigator.clipboard.writeText("9AARG7A");
+  alert("Code copied!");
+}
+</script>
+
+</body>
+</html>
