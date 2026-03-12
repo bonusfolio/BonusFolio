@@ -2,14 +2,55 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Visu — Signup</title>
+<title>Visu — Join BonusFolio</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
-  body{font-family:Arial,system-ui;margin:0;background:#f5f7fb;display:flex;align-items:center;justify-content:center;height:100vh}
-  .card{background:#fff;padding:26px;border-radius:12px;max-width:480px;box-shadow:0 8px 30px rgba(0,0,0,0.06);text-align:center}
-  .btn{display:block;margin:12px auto 0;padding:12px 18px;border-radius:8px;background:#2563eb;color:#fff;text-decoration:none;font-weight:700}
-  .muted{font-size:13px;color:#444;margin-top:10px;text-align:left}
-  .qr{width:160px;height:160px;border-radius:8px;margin:12px 0;display:block;object-fit:cover;}
+  body {
+    font-family: Arial, system-ui;
+    margin: 0;
+    background: #f5f7fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .card {
+    background: #fff;
+    padding: 26px;
+    border-radius: 12px;
+    max-width: 480px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    text-align: center;
+  }
+  h2 {
+    margin-top: 0;
+  }
+  .btn {
+    display: block;
+    margin: 12px auto 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .muted {
+    font-size: 13px;
+    color: #444;
+    margin-top: 10px;
+    text-align: left;
+  }
+  .qr {
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+    margin: 12px 0;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 </style>
 </head>
 <body>
@@ -18,4 +59,13 @@
     <p>Join Visu and follow BonusFolio</p>
 
     <!-- QR Image -->
-    <img class="qr" src="visu/qr
+    <img class="qr" src="qr.png" alt="Visu QR code">
+
+    <a class="btn" href="https://visu.to/r/bonusfolio" target="_blank" rel="noopener noreferrer">Go to Visu</a>
+
+    <div class="muted">
+      <strong>Note:</strong> No referral code is required. Scan the QR code or click the button to join.
+    </div>
+  </div>
+</body>
+</html>
