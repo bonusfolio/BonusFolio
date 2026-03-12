@@ -9,7 +9,8 @@
   .card{background:#fff;padding:26px;border-radius:12px;max-width:520px;box-shadow:0 8px 30px rgba(0,0,0,0.06);text-align:center}
   h2{margin:0 0 8px}
   .qr{width:200px;height:200px;border-radius:10px;object-fit:cover;display:block;margin:14px auto}
-  .btn{display:inline-block;padding:12px 18px;margin:10px 8px;border-radius:8px;background:#2563eb;color:#fff;text-decoration:none;font-weight:700}
+  .btn{display:inline-block;padding:12px 18px;margin:10px 8px;border-radius:8px;background:#2563eb;color:#fff;text-decoration:none;font-weight:700;border:none;cursor:pointer}
+  .btn-green{background:#10a37f}
   .muted{font-size:13px;color:#444;text-align:left;margin-top:12px}
   .fallback{padding:16px;border-radius:10px;border:1px dashed #cbd5e1;margin-top:12px;background:#fbfdff}
   .small{font-size:13px;color:#6b7280;margin-top:8px}
@@ -20,7 +21,7 @@
     <h2>Visu — Join BonusFolio</h2>
     <p>Scan the QR or click the button to open Visu.</p>
 
-    <!-- Primary image: local file 'qr.png' in same folder as this index.html -->
+    <!-- Try to load local image "qr.png" (must be in the same visu/ folder) -->
     <img id="qrImg" class="qr" src="qr.png" alt="Visu QR code" crossorigin="anonymous">
 
     <!-- Fallback UI shown if image fails to load -->
@@ -33,13 +34,13 @@
       </ol>
       <div style="margin-top:10px">
         <a id="openVisu" class="btn" href="https://visu.to/r/bonusfolio" target="_blank" rel="noopener noreferrer">Open Visu</a>
-        <button id="retryBtn" class="btn" style="background:#10a37f;border:none;cursor:pointer">Retry image</button>
+        <button id="retryBtn" class="btn btn-green" style="background:#10a37f;border:none;cursor:pointer">Retry image</button>
       </div>
-      <div class="muted">Once you upload <code>qr.png</code>, click <strong>Retry image</strong>.</div>
+      <div class="muted">Once you upload <code>qr.png</code>, click <strong>Retry image</strong> to refresh.</div>
     </div>
 
     <div class="muted" style="margin-top:14px;text-align:left">
-      <strong>Note:</strong> No referral code required — click the button or scan the QR to join.
+      <strong>Note:</strong> No referral code is required — click the button or scan the QR to join.
     </div>
   </div>
 
@@ -48,17 +49,31 @@
   const fallback = document.getElementById('fallback');
   const retry = document.getElementById('retryBtn');
 
-  // If image loads successfully, ensure fallback is hidden
   img.addEventListener('load', () => {
+    // show image, hide fallback
+    img.style.display = 'block';
     fallback.style.display = 'none';
   });
 
-  // If image errors (not uploaded or wrong path), show fallback
   img.addEventListener('error', () => {
+    // hide image, show fallback
     img.style.display = 'none';
     fallback.style.display = 'block';
   });
 
-  // Retry attempts to reload the image (useful after uploading qr.png)
   retry.addEventListener('click', () => {
-    fallback.style.display =
+    fallback.style.display = 'none';
+    img.style.display = 'block';
+    // cache-busting reload
+    img.src = 'qr.png?cb=' + Date.now();
+  });
+
+  // Initial quick-check (in case browser cached an earlier 404)
+  setTimeout(() => {
+    if (!img.complete || img.naturalWidth === 0) {
+      img.dispatchEvent(new Event('error'));
+    }
+  }, 300);
+</script>
+</body>
+</html>
